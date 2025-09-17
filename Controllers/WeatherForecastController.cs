@@ -6,6 +6,7 @@ namespace MicroServiciosPOS.Controllers
     [Route("[controller]")]
     public class WeatherForecastController : ControllerBase
     {
+        // HOLA ESTA ES MI RAMA (HECHO POR SANTI
         private static readonly string[] Summaries = new[]
         {
             "Freezing" , "Santi", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
