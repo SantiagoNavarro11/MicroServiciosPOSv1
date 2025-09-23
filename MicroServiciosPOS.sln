@@ -1,9 +1,17 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.14.36414.22 d17.14
+VisualStudioVersion = 17.14.36414.22
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroServiciosPOS", "MicroServiciosPOS.csproj", "{9FA84F21-E614-49D4-8694-2AEDA5725D6F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "0.2 POS", "0.2 POS", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core.POS", "Core.POS\Core.POS.csproj", "{7BA98E40-1A37-4626-B7CC-F7C7C953F1DD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "0.1 Utilitarios", "0.1 Utilitarios", "{D25323A8-3B76-489D-91D7-1708D5298068}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "0.1 Core", "0.1 Core", "{E6C0EB0E-924C-4911-9706-2B019AF65DF1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,9 +23,17 @@ Global
 		{9FA84F21-E614-49D4-8694-2AEDA5725D6F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9FA84F21-E614-49D4-8694-2AEDA5725D6F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9FA84F21-E614-49D4-8694-2AEDA5725D6F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7BA98E40-1A37-4626-B7CC-F7C7C953F1DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7BA98E40-1A37-4626-B7CC-F7C7C953F1DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7BA98E40-1A37-4626-B7CC-F7C7C953F1DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7BA98E40-1A37-4626-B7CC-F7C7C953F1DD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{7BA98E40-1A37-4626-B7CC-F7C7C953F1DD} = {E6C0EB0E-924C-4911-9706-2B019AF65DF1}
+		{E6C0EB0E-924C-4911-9706-2B019AF65DF1} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C275FFF7-2006-437C-AE70-1899AAD580BF}
