@@ -1,0 +1,30 @@
+-- Crear base de datos si no existe
+IF NOT EXISTS (SELECT name FROM sys.databases WHERE name = 'MicroServiciosPOS')
+BEGIN
+    CREATE DATABASE MicroServiciosPOS;
+END
+GO
+
+USE MicroServiciosPOS;
+GO
+
+-- Crear un esquema para inventario
+IF NOT EXISTS (SELECT * FROM sys.schemas WHERE name = 'Inventario')
+BEGIN
+    EXEC('CREATE SCHEMA Inventario');
+END
+GO
+
+-- Crear tabla dentro del esquema Inventario
+CREATE TABLE Inventario.Producto
+(
+    ProductoId INT IDENTITY(1,1) PRIMARY KEY,
+    CodigoBarras NVARCHAR(50) NOT NULL UNIQUE,
+    Nombre NVARCHAR(150) NOT NULL,
+    Precio DECIMAL(18,2) NOT NULL,
+    Costo DECIMAL(18,2) NULL,
+    Stock INT NOT NULL DEFAULT 0,
+    FechaRegistro DATETIME NOT NULL DEFAULT GETDATE(),
+    Activo BIT NOT NULL DEFAULT 1
+);
+GO

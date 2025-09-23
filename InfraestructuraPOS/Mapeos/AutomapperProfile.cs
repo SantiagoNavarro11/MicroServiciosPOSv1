@@ -1,12 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace InfraestructuraPOS.Mapeos
+﻿namespace InfraestructuraPOS.Mapeos
 {
-    internal class AutomapperProfile
+    using AutoMapper;
+    using Core.POS.Dto;
+    using Core.POS.Entidades;
+
+    /// <summary>Mapeos entre Entidades <-> Dtos y viceversa.</summary>
+    public class AutomapperProfile : Profile
     {
+        #region Constructor
+        /// <summary>Inicializa una nueva instancia de la clase <see cref="AutomapperProfile"/>.</summary>
+        public AutomapperProfile()
+        {
+            CreateMap<Producto, ProductoDto>().ReverseMap();
+        }
+        #endregion
     }
 }

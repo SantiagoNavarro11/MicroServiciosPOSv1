@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroServiciosPOS", "MicroS
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CorePOS", "CorePOS\CorePOS.csproj", "{73426DCB-15E0-6AD4-32A3-457F9671CC59}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Utilitarios", "Utilitarios\Utilitarios\Utilitarios.csproj", "{27FD77CD-CD86-73AE-AA1C-1A48AA5B7F7D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -37,6 +39,10 @@ Global
 		{73426DCB-15E0-6AD4-32A3-457F9671CC59}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{73426DCB-15E0-6AD4-32A3-457F9671CC59}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{73426DCB-15E0-6AD4-32A3-457F9671CC59}.Release|Any CPU.Build.0 = Release|Any CPU
+		{27FD77CD-CD86-73AE-AA1C-1A48AA5B7F7D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{27FD77CD-CD86-73AE-AA1C-1A48AA5B7F7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{27FD77CD-CD86-73AE-AA1C-1A48AA5B7F7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{27FD77CD-CD86-73AE-AA1C-1A48AA5B7F7D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -47,6 +53,7 @@ Global
 		{397802C2-8870-4B91-80A4-C16AF9729BEF} = {86218A79-55F3-4CE1-A748-AF5558A56288}
 		{0A349E6A-7E8E-412B-8C7C-7CACE714F658} = {E6D5D02C-2BA4-4896-ACE8-7BA3B20DBC20}
 		{73426DCB-15E0-6AD4-32A3-457F9671CC59} = {ECF03BA4-E6CB-4DF6-999F-90452E7EDD59}
+		{27FD77CD-CD86-73AE-AA1C-1A48AA5B7F7D} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C275FFF7-2006-437C-AE70-1899AAD580BF}
