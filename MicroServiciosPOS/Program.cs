@@ -1,3 +1,4 @@
+using InfraestructuraPOS.Extenciones;
 using MicroServiciosPOS.Middlewares;
 using Microsoft.Extensions.Logging.ApplicationInsights;
 using Microsoft.OpenApi.Models;
@@ -18,8 +19,6 @@ builder.Services.AddCors(options =>
 builder.Services.AddScoped<GloblalExceptionHandlingMiddleware>();
 builder.Services.AddAuthorization(); // ? Agregado
 builder.Services.AddControllers();
-// Automapper - registro de mapeos.
-builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
 // Configuración Swagger.
 builder.Services.AddSwaggerGen();
