@@ -1,7 +1,6 @@
-
 using MicroServiciosPOS.Middlewares;
+using Microsoft.Extensions.Logging.ApplicationInsights;
 using Microsoft.OpenApi.Models;
-
 
 var builder = WebApplication.CreateBuilder(args);
 
