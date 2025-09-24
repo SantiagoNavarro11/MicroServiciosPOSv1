@@ -7,6 +7,7 @@
     /// </summary>
     public class ProductoDto
     {
+        #region PropiedadesDto
         /// <summary>
         /// Identificador único del producto.
         /// </summary>
@@ -46,5 +47,6 @@
         /// Indica si el producto está activo dentro del sistema.
         /// </summary>
         public bool Activo { get; set; }
+        #endregion
     }
 }

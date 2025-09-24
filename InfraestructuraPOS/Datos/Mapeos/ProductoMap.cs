@@ -19,7 +19,7 @@
         {
             #region Map
             // Nombre de la tabla
-            builder.ToTable("Productos");
+            builder.ToTable("Producto", "Inventario");
 
             // Clave primaria
             builder.HasKey(p => p.ProductoId)

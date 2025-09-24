@@ -19,7 +19,8 @@ builder.Services.AddCors(options =>
 builder.Services.AddScoped<GloblalExceptionHandlingMiddleware>();
 builder.Services.AddAuthorization(); // ? Agregado
 builder.Services.AddControllers();
-
+// Automapper - registro de mapeos.
+builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 // Configuración Swagger.
 builder.Services.AddSwaggerGen();
 builder.Services.AddSwaggerGen(c =>

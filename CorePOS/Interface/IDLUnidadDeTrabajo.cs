@@ -4,7 +4,7 @@
     using System.Threading.Tasks;
 
     /// <summary>
-    /// Define las operaciones para la unidad de trabajo (IServicioUnidadDeTrabajo) en el contexto de peliculas favoritas.
+    /// Define las operaciones para la unidad de trabajo (IServicioUnidadDeTrabajo) en el contexto de Productos.
     /// La unidad de trabajo gestiona las instancias de repositorios relacionados con las entidades de la base de datos.
     /// </summary>
     public interface IDLUnidadDeTrabajo

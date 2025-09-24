@@ -11,7 +11,6 @@
     /// </summary>
     public partial class ServicioUnidadDeTrabajo : IServicioUnidadDeTrabajo
     {
-
         #region Variables
 
         /// <summary>

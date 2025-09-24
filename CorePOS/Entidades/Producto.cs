@@ -1,13 +1,14 @@
-﻿using Utilitarios.Entidades;
-
-namespace Core.POS.Entidades
+﻿namespace Core.POS.Entidades
 {
+    using Utilitarios.Entidades;
+
     /// <summary>
     /// Representa un producto dentro del sistema POS.
     /// Contiene información de identificación, código de barras, precios, inventario y estado.
     /// </summary>
     public class Producto : EntidadBase
     {
+        #region Propiedades
         /// <summary>
         /// Identificador único del producto en la base de datos.
         /// Corresponde a la columna ProductoId (Primary Key, Identity).
@@ -55,6 +56,6 @@ namespace Core.POS.Entidades
         /// Corresponde a la columna Activo (BIT, NOT NULL, DEFAULT 1).
         /// </summary>
         public bool Activo { get; set; }
-
+        #endregion
     }
 }

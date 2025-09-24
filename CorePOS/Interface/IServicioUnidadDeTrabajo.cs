@@ -1,8 +1,8 @@
-﻿using Core.POS.Interface.POSConsulta;
-
-namespace Core.POS.Interface
-/// <summary>Contrato que provee cada uno de los servicios para ser implementados.</summary>
+﻿namespace Core.POS.Interface
 {
+    using Core.POS.Interface.POSConsulta;
+
+    /// <summary>Contrato que provee cada uno de los servicios para ser implementados.</summary>
     public interface IServicioUnidadDeTrabajo
     {
         #region Instancias	

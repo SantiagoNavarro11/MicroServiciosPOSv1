@@ -10,7 +10,7 @@
     using System.Threading.Tasks;
 
     /// <summary>
-    /// Servicio para manejar las operaciones relacionadas con la entidad <see cref="Usuario"/>.
+    /// Servicio para manejar las operaciones relacionadas con la entidad <see cref="Producto"/>.
     /// </summary>
     public class ProductoServicio : IProductoServicio
     {

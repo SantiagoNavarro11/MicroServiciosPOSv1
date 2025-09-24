@@ -7,31 +7,43 @@
     /// <summary> Servicio que maneja eventos del ciclo de vida de la aplicación. </summary>
     public class ApplicationLifetimeEventsHostedService : IHostedService
     {
+        #region Campos Privados
         private readonly IHostApplicationLifetime _appLifetime;
+        #endregion
 
-        /// <summary>Inicializa una nueva instancia de la clase <see cref="ApplicationLifetimeEventsHostedService"/>.</summary>
+        #region Constructor
+        /// <summary>
+        /// Inicializa una nueva instancia de la clase <see cref="ApplicationLifetimeEventsHostedService"/>.
+        /// </summary>
         /// <param name="appLifetime">Interfaz para gestionar el ciclo de vida de la aplicación.</param>
-        public ApplicationLifetimeEventsHostedService(IHostApplicationLifetime appLifetime) => _appLifetime = appLifetime;
+        public ApplicationLifetimeEventsHostedService(IHostApplicationLifetime appLifetime)
+            => _appLifetime = appLifetime;
+        #endregion
 
-        /// <summary>Método que se ejecuta cuando el servicio se inicia.</summary>
-        /// <param name="cancellationToken">Token de cancelación.</param>
-        /// <returns>Tarea completada.</returns>
+        #region Métodos de Ciclo de Vida
+        /// <summary>
+        /// Método que se ejecuta cuando el servicio se inicia.
+        /// </summary>
         public Task StartAsync(CancellationToken cancellationToken)
         {
-
-            // Registra el método OnStarted para ejecutarse cuando la aplicación se inicia.
+            // Registra los eventos del ciclo de vida de la aplicación
             _appLifetime.ApplicationStarted.Register(OnStarted);
-
-            // Registra el método OnStopping para ejecutarse cuando la aplicación se está deteniendo.
             _appLifetime.ApplicationStopping.Register(OnStopping);
-
-            // Registra el método OnStopped para ejecutarse cuando la aplicación se ha detenido.
             _appLifetime.ApplicationStopped.Register(OnStopped);
 
             return Task.CompletedTask;
-
         }
 
+        /// <summary>
+        /// Método que se ejecuta cuando el servicio se detiene.
+        /// </summary>
+        public Task StopAsync(CancellationToken cancellationToken)
+        {
+            return Task.CompletedTask;
+        }
+        #endregion
+
+        #region Métodos Privados
         /// <summary>Método que se ejecuta cuando la aplicación se ha iniciado.</summary>
         private void OnStarted()
         {
@@ -41,24 +53,16 @@
         /// <summary>Método que se ejecuta cuando la aplicación se está deteniendo.</summary>
         private void OnStopping()
         {
-            Console.WriteLine("Ms de POS se está deteniendo", "warning");
+            Console.WriteLine("MS de POS se está deteniendo", "warning");
             Thread.Sleep(10000);
         }
 
         /// <summary>Método que se ejecuta cuando la aplicación se ha detenido.</summary>
         private void OnStopped()
         {
-            Console.WriteLine("Ms de POS detenida", "warning");
+            Console.WriteLine("MS de POS detenida", "warning");
             Thread.Sleep(10000);
         }
-
-        /// <summary>Método que se ejecuta cuando el servicio se detiene.</summary>
-        /// <param name="cancellationToken">Token de cancelación.</param>
-        /// <returns>Una tarea completada.</returns>
-        public Task StopAsync(CancellationToken cancellationToken)
-        {
-            return Task.CompletedTask;
-        }
-    
+        #endregion
     }
 }
