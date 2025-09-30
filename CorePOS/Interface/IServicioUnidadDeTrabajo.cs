@@ -9,6 +9,8 @@
 
         /// <summary>Inicialización y verificación de la instancia para el servicio .</summary>
         public IProductoServicio ProductoServicio { get; }
+
+        public IUsuarioServicio UsuarioServicio { get; }
         #endregion
     }
 }

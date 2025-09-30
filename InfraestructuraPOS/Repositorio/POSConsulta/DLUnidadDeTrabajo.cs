@@ -24,6 +24,11 @@
         /// </summary>
         private readonly IDLProducto? _iDLProducto;
 
+        /// <summary>
+        /// Instancia del repositorio para la entidad <see cref="Usuario"/>.
+        /// </summary>
+        private readonly IDLUsuario? _iDLUsuario;
+
         #endregion
 
         #region Constructor
@@ -48,6 +53,12 @@
         /// Si la instancia no existe, se crea una nueva utilizando la conexión actual.
         /// </summary>
         public IDLProducto DLProducto => _iDLProducto ?? new DLProducto(_conexionBD)!;
+
+        /// <summary>
+        /// Obtiene una instancia del repositorio para la entidad <see cref="Usuario"/>.
+        /// Si la instancia no existe, se crea una nueva utilizando la conexión actual.
+        /// </summary>
+        public IDLUsuario DLUsuario => _iDLUsuario ?? new DLUsuario(_conexionBD)!;
 
 
         #endregion

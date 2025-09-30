@@ -65,16 +65,16 @@
             if (producto == null)
                 errores += "El producto no puede ser nulo. | ";
 
-            if (string.IsNullOrWhiteSpace(producto.Nombre))
+            if (string.IsNullOrWhiteSpace(producto?.Nombre))
                 errores += "El nombre del producto es obligatorio. | ";
 
-            if (string.IsNullOrWhiteSpace(producto.CodigoBarras))
+            if (string.IsNullOrWhiteSpace(producto?.CodigoBarras))
                 errores += "El código de barras es obligatorio. | ";
 
-            if (producto.Precio <= 0)
+            if (producto?.Precio <= 0)
                 errores += "El precio debe ser mayor a cero. | ";
 
-            if (producto.FechaRegistro == default)
+            if (producto?.FechaRegistro == default)
                 producto.FechaRegistro = DateTime.UtcNow;
 
             // Validar duplicado por código de barras

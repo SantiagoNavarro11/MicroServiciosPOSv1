@@ -1,6 +1,7 @@
 ﻿namespace InfraestructuraPOS.Datos
 {
     using Core.POS.Entidades;
+    using CorePOS.Entidades;
     using InfraestructuraPOS.Datos.Mapeos;
     using Microsoft.EntityFrameworkCore;
 
@@ -38,6 +39,7 @@
         {
             modelBuilder.HasAnnotation("Relational:Collation", "Latin1_General_CI_AS");
             modelBuilder.ApplyConfiguration(new ProductoMap());
+            modelBuilder.ApplyConfiguration(new UsuarioMap());
         }
 
         #endregion
@@ -45,7 +47,10 @@
         #region Entidades
         /// <value>Declaración del DbSet Producto.</value>
         public virtual DbSet<Producto> Producto { get; set; }
-        
-        #endregion    
+
+        /// <value>Declaración del DbSet Usuario.</value>
+        public virtual DbSet<Usuario> Usuario { get; set; }
+
+        #endregion
     }
 }

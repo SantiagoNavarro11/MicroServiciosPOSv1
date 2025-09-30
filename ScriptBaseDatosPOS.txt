@@ -28,3 +28,21 @@ CREATE TABLE Inventario.Producto
     Activo BIT NOT NULL DEFAULT 1
 );
 GO
+
+
+-- Crear el esquema Seguridad si no existe
+IF NOT EXISTS (SELECT * FROM sys.schemas WHERE name = 'Seguridad')
+BEGIN
+    EXEC('CREATE SCHEMA Seguridad');
+END;
+GO
+
+-- Ahora sí crear la tabla
+CREATE TABLE Seguridad.Usuario (
+    Id INT IDENTITY(1,1) PRIMARY KEY,
+    Nombre NVARCHAR(100) NOT NULL,
+    Correo NVARCHAR(150) NOT NULL UNIQUE,
+    Contrasena NVARCHAR(255) NOT NULL,
+    FechaRegistro DATETIME NOT NULL DEFAULT(GETDATE()),
+    Estado BIT NOT NULL DEFAULT(1)
+);

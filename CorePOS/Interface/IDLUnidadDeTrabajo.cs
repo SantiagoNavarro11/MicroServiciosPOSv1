@@ -17,6 +17,12 @@
         /// </summary>
         IDLProducto DLProducto { get; }
 
+        /// <summary>
+        /// Instancia del repositorio de Usuario.
+        /// Este repositorio se encarga de las operaciones CRUD sobre la entidad de Usuario.
+        /// </summary>
+        IDLUsuario DLUsuario { get; }
+
         #endregion
 
         #region Liberar Conexión

@@ -29,6 +29,12 @@
         /// </summary>
         private readonly IProductoServicio _iProductoServicio;
 
+        /// <summary>
+        /// Instancia del servicio que gestiona la lógica de negocio relacionada con los Usuarios del sistema.
+        /// Su inicialización es controlada para garantizar una única instancia durante el ciclo de vida.
+        /// </summary>
+        private readonly IUsuarioServicio _iUsuarioServicio;
+
         #endregion
 
         #region Constructor
@@ -57,6 +63,12 @@
         /// Si no existe una instancia previa, se crea una nueva utilizando la unidad de trabajo de datos actual.
         /// </summary>
         public IProductoServicio ProductoServicio => _iProductoServicio ?? new ProductoServicio(_iDLUnidadDeTrabajo);
+
+        /// <summary>
+        /// Obtiene una instancia del servicio <see cref="_iUsuarioServicio"/>.
+        /// Si no existe una instancia previa, se crea una nueva utilizando la unidad de trabajo de datos actual.
+        /// </summary>
+        public IUsuarioServicio UsuarioServicio => _iUsuarioServicio ?? new UsuarioServicio(_iDLUnidadDeTrabajo);
 
         #endregion
     }
